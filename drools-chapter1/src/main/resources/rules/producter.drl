@@ -1,0 +1,16 @@
+package producter
+import com.rebote.drools.common.model.Producter
+rule "Offer4Diamond"
+	when
+		productObject : Producter( type == Producter.DIAMOND )
+	then
+		productObject.setDiscount(15);
+end
+
+rule "Offer4Gold"
+	when
+		productObject : Producter( type == Producter.GOLD )
+	then
+		productObject.setDiscount(25);
+		
+end

@@ -1,0 +1,17 @@
+package rules
+
+rule "auto-fouces"
+	agenda-group "abcd"
+	auto-focus true
+	when
+		
+	then
+		System.out.println("规则test auto-fouces 被触发");
+end
+
+rule otherRule1
+
+    when
+    then
+        System.out.println("其他规则1被触发");
+    end

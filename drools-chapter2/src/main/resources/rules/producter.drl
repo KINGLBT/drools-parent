@@ -1,0 +1,20 @@
+package rules
+
+import com.rebote.drools.common.model.Producter
+
+rule "updateDistcount"
+    no-loop true
+	when
+		productObj : Producter( discount > 0 );
+	then
+		productObj.setDiscount(productObj.getDiscount()+1);
+		System.out.println(productObj.getDiscount());
+		update(productObj);
+end
+
+rule "otherRule"
+	when
+		productObj : Producter(discount > 1);
+	then
+		System.out.println("被触发了" + productObj.getDiscount());
+end

@@ -1,0 +1,15 @@
+package rules
+
+rule "filter-rules"
+	when
+		
+	then
+		System.out.println("规则test filter-rules 被触发");
+end
+
+rule otherRule2
+
+    when
+    then
+        System.out.println("其他规则2被触发");
+    end
